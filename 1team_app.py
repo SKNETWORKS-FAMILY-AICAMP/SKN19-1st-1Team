@@ -1,4 +1,4 @@
-# 5team_app.py
+# 1team_app.py
 import streamlit as st
 
 # 하위 페이지 모듈 불러오기 (각 모듈 안에 반드시 page() 함수가 있어야 합니다)
