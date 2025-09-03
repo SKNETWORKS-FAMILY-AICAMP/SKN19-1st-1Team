@@ -3,7 +3,7 @@
 ## 1. FAQ DB 작업
 - `db/` 폴더 새로 생성  
 - `import_faq_db.py` 작성 → `data/faq_allta.csv`, `data/faq_carme_swaptext.csv` 를 MySQL `tbl_faq` 테이블에 적재  
-- `tbl_faq` 테이블의 `VARCHAR(50)` 컬럼 숫자 변경 (답변 길이 잘림 방지)
+- `tbl_faq` 테이블의 `VARCHAR(50)` 컬럼 숫자 (1000)으로 변경 (답변 길이 잘림 방지)
 
 ## 2. FAQ 페이지 구현
 - `streamlit/pages/3_FAQ.py` 생성  
