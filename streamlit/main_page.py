@@ -2,6 +2,7 @@ import streamlit as st
 
 # 페이지 세팅
 st.set_page_config(page_title="Car Me Sama", page_icon="🛞", layout="wide")
+st.image("image/logo2.png", width=300)
 st.header('Car Me Sama 대리점 개설, 저희가 도와드릴게요 !')
 st.badge(
     "전국 자동차 등록 현황과 타이어 매장 분석 데이터를 기반으로, "
@@ -9,6 +10,7 @@ st.badge(
     icon=":material/check:", 
     color="blue"
 )
+
 st.divider()
 
 st.subheader('왜 이 플랫폼이 필요할까요?')
