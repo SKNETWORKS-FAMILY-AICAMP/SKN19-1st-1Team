@@ -62,7 +62,7 @@
 | 카테고리               | 기술 스택                                                      |
 | ---------------------- | ------------------------------------------------------------- |
 | **WEB**                | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="Streamlit" width="20"/> Streamlit  |
-| **라이브러리**         | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" width="20"/> Pandas, <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" /> matplotlib |
+| **라이브러리**         | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" width="20"/> Pandas, <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" alt="matplotlib" width="20" /> matplotlib |
 | **데이터베이스**       | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="20"/> MySQL  |
 | **개발 환경 및 협업 도구** | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="20"/> Git, <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode" width="20"/> VSCode, <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" alt="Notion" width="20"/> Notion |
 
@@ -132,8 +132,11 @@
   
 - **김성욱**
 
+  공부의 필요성이 더 와닿았다. 부딪혀보며 배운 것들이 귀하다. 웹 크롤링과 DB streamlit 전부 수업시간에 배운것들이였지만 배운것들을 토대로 활용하는것에 어려움을 느꼈고, 팀원들의 도움으로 어찌저찌 최소한의 목표까지 달성할 수 있었다.
+  감사하고 죄송하고 앞으로 더 공부해서 팀에 도움이 되는 사람이 되어야겠다고 느꼈다.
 
 - **박소희**
+
   웹 크롤링을 하고, DB에 연동을 하는 것 자체가 처음이라 많이 버벅였던 것 같다. 웹 크롤링을 하며 확실하게 필요한 데이터를 선별해내는 방법을 알 수 있었고, 다시 한번 제대로 복습해보며 제대로 된 산출물을 내고 싶다는 생각이 들었다. 깃허브가 익숙하지 않아 코드를 한번 날려서 깃허브에 대해서도 좀 더 많이 알아보고 툴에 좀 더 익숙해지는 연습이 필요하다는 것을 정실하게 느끼게 되었다.
   
 
