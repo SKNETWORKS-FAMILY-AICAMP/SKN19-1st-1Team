@@ -1,135 +1,149 @@
-import os, re, math
-import pandas as pd
 import streamlit as st
-from sqlalchemy import create_engine, text
-from sqlalchemy.engine import Engine
-from urllib.parse import quote_plus
+import pandas as pd
+import math
+import os
+from dotenv import load_dotenv
+import mysql.connector
 
+# --- 1. 환경 변수 및 페이지 설정 ---
+load_dotenv()
 st.title("파트너 현황")
 
-PAGE_SIZE = 10 
-
-
-@st.cache_resource
-def get_engine() -> Engine:
+# --- 2. DB 연결 및 데이터 로직 ---
+# mysql.connector는 커넥션 풀을 제공하지 않으므로, 연결/해제 로직을 직접 관리합니다.
+@st.cache_data(ttl=300)
+def fetch_data(keyword, page, order):
+    """DB에서 데이터를 가져와 DataFrame으로 반환하는 함수"""
+    connection = None
     try:
-        cfg = st.secrets["db"]  
-    except Exception:
-        cfg = {
-            "user": os.getenv("DB_USER", "root"),
-            "password": os.getenv("DB_PASSWORD", "05060112"),
-            "host": os.getenv("DB_HOST", "127.0.0.1"),
-            "port": int(os.getenv("DB_PORT", "3306")),
-            "database": os.getenv("DB_NAME", "carmesamadb"),
+        # DB 연결 정보
+        connect_info = {
+            "user": os.getenv("DB_USER"),
+            "password": os.getenv("DB_PASSWORD"),
+            "host": os.getenv("DB_HOST"),
+            "port": int(os.getenv("DB_PORT")),
+            "database": os.getenv("DB_NAME")
         }
-    url = (
-        f"mysql+pymysql://{cfg['user']}:{quote_plus(str(cfg['password']))}"
-        f"@{cfg['host']}:{cfg['port']}/{cfg['database']}?charset=utf8mb4&connect_timeout=5"
-    )
-    return create_engine(url, pool_pre_ping=True, pool_recycle=3600)
 
-def normalize_phone(s: str) -> str:
-    digits = re.sub(r"\D+", "", str(s))
-    if digits.startswith("010") and len(digits) == 11:
+        # 필수 환경 변수 누락 확인
+        if not all(connect_info.values()):
+            st.error("데이터베이스 환경 변수가 올바르게 설정되지 않았습니다.")
+            st.stop()
+        
+        # DB 연결
+        connection = mysql.connector.connect(**connect_info)
+        cursor = connection.cursor(dictionary=True)
+        
+        # 쿼리 조건 및 매개변수 설정
+        sql_where, params = "", []
+        if keyword:
+            sql_where = "WHERE (VENDOR_NAME LIKE %s OR ADDRESS LIKE %s OR PHONE LIKE %s)"
+            kw_param = f"%{keyword}%"
+            params = [kw_param, kw_param, kw_param]
+
+        # 총 데이터 개수 계산
+        count_sql = f"SELECT COUNT(*) AS cnt FROM tbl_vendor {sql_where}"
+        cursor.execute(count_sql, params)
+        total_count = cursor.fetchone()['cnt'] or 0
+
+        # 정렬 순서 설정
+        order_map = {"이름순": "VENDOR_NAME ASC", "주소순": "ADDRESS ASC"}
+        order_by = order_map.get(order, "VENDOR_NAME ASC")
+        
+        # 페이지네이션 오프셋 설정
+        offset = (page - 1) * PAGE_SIZE
+        
+        # 실제 데이터 조회
+        query = f"""
+            SELECT VENDOR_NAME, ADDRESS, PHONE
+            FROM tbl_vendor
+            {sql_where}
+            ORDER BY {order_by}
+            LIMIT %s OFFSET %s
+        """
+        # LIMIT와 OFFSET 매개변수는 별도로 추가
+        params.extend([PAGE_SIZE, offset])
+        cursor.execute(query, params)
+        
+        df = pd.DataFrame(cursor.fetchall())
+
+        # 전화번호 정규화
+        if not df.empty:
+            df["PHONE"] = df["PHONE"].apply(normalize_phone)
+        
+        return df, total_count
+
+    except mysql.connector.Error as err:
+        st.error(f"데이터베이스 연결 오류 — `.env` 파일의 설정을 확인하세요.")
+        st.exception(err)
+        st.stop()
+    finally:
+        if connection and connection.is_connected():
+            connection.close()
+            
+# --- 3. 전화번호 정규화 함수 ---
+def normalize_phone(s: str):
+    digits = "".join(filter(str.isdigit, str(s)))
+    if len(digits) == 11 and digits.startswith("010"):
         return f"{digits[:3]}-{digits[3:7]}-{digits[7:]}"
-    if digits.startswith("02") and len(digits) == 10:
+    elif len(digits) == 10 and digits.startswith("02"):
         return f"{digits[:2]}-{digits[2:6]}-{digits[6:]}"
-    if len(digits) == 10:
-        return f"{digits[:3]}-{digits[3:6]}-{digits[6:]}"
     return s
 
-def where_and_params(keyword: str):
-    kw = (keyword or "").strip()
-    if kw:
-        return (
-            "WHERE (VENDOR_NAME LIKE :kw OR ADDRESS LIKE :kw OR PHONE LIKE :kw)",
-            {"kw": f"%{kw}%"},
-        )
-    return "", {}
+# --- 4. Streamlit UI ---
+PAGE_SIZE = 10
 
-@st.cache_data(ttl=60)
-def total_count(keyword: str) -> int:
-    where_sql, params = where_and_params(keyword)
-    sql = text(f"SELECT COUNT(*) AS cnt FROM tbl_vendor {where_sql}")
-    with get_engine().connect() as c:
-        row = c.execute(sql, params).mappings().first()
-    return int(row["cnt"] if row else 0)
+# 세션 상태 변수 초기화
+if 'page' not in st.session_state: st.session_state.page = 1
+if 'keyword' not in st.session_state: st.session_state.keyword = ""
+if 'order' not in st.session_state: st.session_state.order = "이름순"
 
-@st.cache_data(ttl=60)
-def fetch_page(keyword: str, page: int, page_size: int, order: str) -> pd.DataFrame:
-    where_sql, params = where_and_params(keyword)
-    order_map = {"이름순": "VENDOR_NAME ASC", "주소순": "ADDRESS ASC"}
-    order_clause = order_map.get(order, "VENDOR_NAME ASC")
-    offset = (page - 1) * page_size
-    params.update({"limit": page_size, "offset": offset})
+# 검색 및 정렬 바
+kw_input = st.text_input("검색어 (상호/주소/전화)", st.session_state.keyword, placeholder="예) 카미사마, 송파, 010-...")
+order_select = st.selectbox("정렬", ["이름순", "주소순"], index=["이름순", "주소순"].index(st.session_state.order))
 
-    sql = text(f"""
-        SELECT VENDOR_NAME, ADDRESS, PHONE
-        FROM tbl_vendor
-        {where_sql}
-        ORDER BY {order_clause}
-        LIMIT :limit OFFSET :offset
-    """)
-    with get_engine().connect() as c:
-        df = pd.read_sql(sql, c, params=params)
-    if not df.empty:
-        df["PHONE"] = df["PHONE"].map(normalize_phone)
-    return df
+# 검색 및 초기화 버튼
+c1, c2 = st.columns(2)
+if c1.button("검색"):
+    if kw_input != st.session_state.keyword or order_select != st.session_state.order:
+        st.session_state.page = 1
+    st.session_state.keyword = kw_input
+    st.session_state.order = order_select
+    st.rerun()
 
+if c2.button("초기화"):
+    st.session_state.keyword = ""
+    st.session_state.order = "이름순"
+    st.session_state.page = 1
+    st.rerun()
 
-if "partner_kw" not in st.session_state:      st.session_state.partner_kw = ""
-if "partner_page" not in st.session_state:    st.session_state.partner_page = 1
-if "partner_order" not in st.session_state:   st.session_state.partner_order = "이름순"
+# --- 5. 데이터 표시 및 페이징 ---
+df, total_count = fetch_data(st.session_state.keyword, st.session_state.page, st.session_state.order)
 
-bar = st.container()
-with bar:
-    c1, c2, c3, c4 = st.columns([4, 2, 1, 1])
-    kw = c1.text_input("검색어 (상호/주소/전화)", st.session_state.partner_kw, placeholder="예) 카미사마, 송파, 010-...")
-    order = c2.selectbox(
-        "정렬",
-        ["이름순", "주소순"],
-        index=0 if st.session_state.partner_order == "이름순" else 1,
-    )
-    search_clicked = c3.button("검색", use_container_width=True)
-    reset_clicked  = c4.button("초기화", use_container_width=True)
-
-    if search_clicked:
-        if kw != st.session_state.partner_kw or order != st.session_state.partner_order:
-            st.session_state.partner_page = 1
-        st.session_state.partner_kw = kw
-        st.session_state.partner_order = order
-
-    if reset_clicked:
-        st.session_state.partner_kw = ""
-        st.session_state.partner_order = "이름순"
-        st.session_state.partner_page = 1
-        kw, order = "", "이름순"
-
-
-try:
-    tot = total_count(st.session_state.partner_kw)
-except Exception as e:
-    st.error("DB 연결/조회 오류 — secrets.toml을 만들거나 환경변수를 설정하세요.")
-    st.exception(e)
-    st.stop()
-
-pages = max(1, math.ceil(tot / PAGE_SIZE))
-if st.session_state.partner_page > pages:
-    st.session_state.partner_page = pages
-
-left, right = st.columns([3, 2])
-with left:
-    st.markdown(f"**총 {tot}건** · 페이지 **{st.session_state.partner_page} / {pages}** · 정렬: **{st.session_state.partner_order}**")
-with right:
-    b1, b2, b3, b4 = st.columns(4)
-    if b1.button("⏮️ 처음"): st.session_state.partner_page = 1
-    if b2.button("◀️ 이전") and st.session_state.partner_page > 1: st.session_state.partner_page -= 1
-    if b3.button("다음 ▶️") and st.session_state.partner_page < pages: st.session_state.partner_page += 1
-    if b4.button("마지막 ⏭️"): st.session_state.partner_page = pages
-
-df = fetch_page(st.session_state.partner_kw, st.session_state.partner_page, PAGE_SIZE, st.session_state.partner_order)
-
-if tot == 0:
+if total_count == 0:
     st.info("검색 결과가 없습니다.")
 else:
+    total_pages = math.ceil(total_count / PAGE_SIZE)
+    if st.session_state.page > total_pages:
+        st.session_state.page = total_pages
+        st.rerun()
+
+    st.markdown(f"**총 {total_count}건** · 페이지 **{st.session_state.page} / {total_pages}**")
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    # 페이징 버튼
+    col1, col2, col3, col4 = st.columns(4)
+    if col1.button("⏮️ 처음"):
+        st.session_state.page = 1
+        st.rerun()
+    if col2.button("◀️ 이전"):
+        if st.session_state.page > 1:
+            st.session_state.page -= 1
+            st.rerun()
+    if col3.button("다음 ▶️"):
+        if st.session_state.page < total_pages:
+            st.session_state.page += 1
+            st.rerun()
+    if col4.button("마지막 ⏭️"):
+        st.session_state.page = total_pages
+        st.rerun()
