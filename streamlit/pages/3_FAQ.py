@@ -172,6 +172,7 @@ results = df[mask].reset_index(drop=True)
 st.markdown(f"**총 {len(results)}건** 표시 중")
 st.markdown("<hr class='hr-soft'/>", unsafe_allow_html=True)
 
+
 for _, row in results.iterrows():
     q = str(row.get("QUESTION", "")).strip()
     a = str(row.get("ANSWER", "")).strip()
