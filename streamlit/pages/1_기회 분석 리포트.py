@@ -14,7 +14,7 @@ load_dotenv()
 # 페이지 초기화
 # ------------------------------------------------------------
 
-st.title("기회 분석 리포트")
+st.set_page_config(page_title="기회 분석 리포트", page_icon="🛞", layout="wide")
 
 # ------------------------------------------------------------
 # DB 연결
@@ -231,7 +231,7 @@ reg_id = None
 if not (selected_sido == '전체' or selected_sigungu == '전체'):
     reg_id = addr_reg_id[selected_sido + " " + selected_sigungu]
 
-print(reg_id)
+# print(reg_id)
 
 supplier_total, population_total, car_total = get_infos(reg_id)
 years = ['2020','2021','2022','2023','2024']
