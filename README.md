@@ -12,12 +12,12 @@
     <td align="center" style="padding:20px;">
         <strong>김성욱</strong><br/>
         <a href="https://github.com/">GitHub</a><br/>
-        @
+        @souluk319
     </td>
     <td align="center" style="padding: 20px;">
       <strong>박소희</strong><br/>
       <a href="https://github.com/souluk319">GitHub</a><br/>
-      @souluk319
+      @xxoysauce
     </td>
     <td align="center" style="padding: 20px;">
       <strong>안수이</strong><br/>
@@ -101,6 +101,10 @@
 - **가맹점 FAQ**
 
     https://www.ikfa.or.kr/bbs/faq.php?fm_id=2
+  
+- **프랭크버거 가맹 FAQ**
+- 
+    https://frankburger.co.kr/board/index.php?board=faq_01
 
 
 ## 📋한줄 회고 
