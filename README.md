@@ -75,8 +75,22 @@
 <img alt='erd' src='image/erd.png' />
 
 ## 🖥️수행 결과
+**1. 기회 분석 리포트**
+
+선택한 지역의 연도별 1인당 차량 대수와 차량당 공급업체 수 비교 분석
+
 <img alt='report1' src='image/report1.png' />
+
+
+**2. 파트너 현황**
+
+현재 운영중인 전국 매장 데이터
+
 <img alt='report2' src='image/report2.png' />
+
+
+**3. 가맹점 관련 FAQ 리스트**
+
 <img alt='report3' src='image/report3.png' />
 
 
