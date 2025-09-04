@@ -98,6 +98,9 @@
 - **가맹점 FAQ**
 
     https://www.ikfa.or.kr/bbs/faq.php?fm_id=2
+  
+- **프랭크버거 가맹 FAQ**
+    https://frankburger.co.kr/board/index.php?board=faq_01
 
 
 ## 📋한줄 회고 
