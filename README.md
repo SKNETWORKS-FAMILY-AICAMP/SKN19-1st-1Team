@@ -56,7 +56,7 @@
 | 카테고리               | 기술 스택                                                      |
 | ---------------------- | ------------------------------------------------------------- |
 | **WEB**                | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="Streamlit" width="20"/> Streamlit  |
-| **라이브러리**         | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" width="20"/> Pandas, <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" /> matplotlib |
+| **라이브러리**         | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" width="20"/> Pandas, <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" alt="matplotlib" width="20" /> matplotlib |
 | **데이터베이스**       | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="20"/> MySQL  |
 | **개발 환경 및 협업 도구** | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="20"/> Git, <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode" width="20"/> VSCode, <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" alt="Notion" width="20"/> Notion |
 
