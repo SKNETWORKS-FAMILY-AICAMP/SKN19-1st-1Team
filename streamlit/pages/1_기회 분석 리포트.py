@@ -5,6 +5,7 @@ from matplotlib import font_manager, rc
 from dotenv import load_dotenv
 import mysql.connector
 import os
+import platform
 
 load_dotenv()
 
@@ -12,7 +13,7 @@ load_dotenv()
 # 페이지 초기화
 # ------------------------------------------------------------
 
-st.title("막대 1개와 선 2개 그래프 겹쳐 그리기")
+st.title("기회 분석 리포트")
 
 # ------------------------------------------------------------
 # DB 연결
@@ -106,10 +107,23 @@ def make_chart(years:list, suppliers:list, populations:list, cars:list):
             per_list_a.append(ratio)
         return per_list_a
 
-    # 폰트 설정 (Windows)
-    font_name = font_manager.FontProperties(fname="C:/Windows/Fonts/malgun.ttf").get_name()
-    rc('font', family=font_name)
-    plt.rcParams['axes.unicode_minus'] = False # 마이너스 기호 깨짐 방지
+    #-----------------------------------------------------
+    # 현재 운영체제 확인
+    current_os = platform.system()
+    
+    # 윈도우 환경
+    if current_os == 'Windows':
+        font_name = font_manager.FontProperties(fname="C:/Windows/Fonts/malgun.ttf").get_name()
+        rc('font', family=font_name)
+    # 맥OS 환경
+    elif current_os == 'Darwin':
+        rc('font', family='AppleGothic')
+    # 리눅스 환경 (Streamlit Cloud 등)
+    elif current_os == 'Linux':
+        rc('font', family='NanumGothic')
+    
+    # 모든 OS에서 마이너스 기호 깨짐 방지
+    plt.rcParams['axes.unicode_minus'] = False
 
     list_a = get_per_list_a(cars, suppliers)
 
@@ -123,12 +137,6 @@ def make_chart(years:list, suppliers:list, populations:list, cars:list):
         #'차량대수': car_total,
         '1인당 차량 대수': get_per_list_a(populations, cars)
     })
-
-    # 폰트 설정 (Windows용, 한글 깨짐 방지)
-    font_name = font_manager.FontProperties(fname="C:/Windows/Fonts/malgun.ttf").get_name()
-    rc('font', family=font_name)
-    plt.rcParams['axes.unicode_minus'] = False 
-
     st.title("연도별 통계 데이터")
 
     # 두 개의 Y축을 갖는 figure 생성
@@ -157,7 +165,7 @@ def make_chart(years:list, suppliers:list, populations:list, cars:list):
     ax1.legend(lines + lines2, labels + labels2, loc='upper left')
 
     # 제목 및 레이아웃 설정
-    fig.suptitle('연도별 1인당 차량 대수 및 차량당 공급업체 수 비교', fontsize=16)
+    fig.suptitle('숫자가 말해주는 성공의 기회.', fontsize=16)
     fig.tight_layout()
 
     return fig
