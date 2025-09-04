@@ -1,4 +1,5 @@
-# streamlit/pages/3_FAQ.py
+# FAQ 일단 올립니다. 좀 더 깔끔하게 정리 해보겠습니다.
+
 import os
 from pathlib import Path
 
@@ -67,7 +68,8 @@ try:
         host=DB_CFG["host"], port=DB_CFG["port"],
         user=DB_CFG["user"], password=DB_CFG["password"],
         database=DB_CFG["database"], charset=DB_CFG["charset"],
-    ); _t.close()
+    )
+    _t.close()
     POOL = pooling.MySQLConnectionPool(pool_name="faq_pool", pool_size=5, autocommit=True, **DB_CFG)
 except Exception as e:
     st.error(f"DB 연결 실패: {e}")
@@ -94,38 +96,57 @@ def load_faq_df() -> pd.DataFrame:
         conn.close()
 
 # =========================================
-# 스타일
+# 스타일 (테마 자동 대응: 라이트/다크 모두)
 # =========================================
 st.markdown("""
 <style>
-.stApp { background: #f7f9fc; color: #1f2937; }
 .block-container { padding-top: 1.2rem !important; max-width: 1100px !important; }
+
+/* 라이트/다크 공통 카드 스타일 */
+div[data-testid="stExpander"]{
+  border: 1px solid var(--secondary-background-color);
+  border-radius: 14px; background: var(--background-color);
+  box-shadow: 0 10px 30px rgba(17,24,39,.06); margin-bottom: 10px;
+}
+.streamlit-expanderHeader{
+  font-weight: 600 !important;
+  background: var(--secondary-background-color) !important;
+}
 
 /* 헤더 중앙 정렬 */
 .header-wrap {
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  gap:8px; margin:0 0 14px 0;
+  gap:8px; margin:0 0 14px 0; text-align:center;
 }
 .header-wrap img { display:block; margin:0 auto; }
-.header-sub { color:#6b7280; font-size:0.95rem; }
+.header-wrap .stImage { display:flex; justify-content:center; }
+.header-sub { opacity:.8; font-size:0.95rem; text-align:center; }
 
 /* 필터 카드 */
 .filter-bar {
-  background:#fff; border:1px solid #e5e7eb; border-radius:14px;
-  padding:12px 14px; box-shadow:0 6px 20px rgba(17,24,39,.06);
-  margin:8px 0 18px 0;
+  border: 1px solid var(--secondary-background-color);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 6px 20px rgba(17,24,39,.06);
+  margin: 8px 0 18px 0;
+  background: var(--background-color);
 }
 
-/* Expander 카드 */
-div[data-testid="stExpander"]{
-  border:1px solid #e5e7eb; border-radius:14px; background:#fff;
-  box-shadow:0 10px 30px rgba(17,24,39,.06); margin-bottom:10px;
-}
-.streamlit-expanderHeader{ font-weight:600 !important; color:#111827 !important; background:#f3f4f6 !important; }
-
-/* 소프트 구분선 */
+/* 얇은 구분선 */
 .hr-soft { margin:10px 0 12px 0; opacity:.55; }
-.shrink { height:6px; }  /* 상단 여백 최소화 */
+.shrink { height:6px; }
+
+/* 라이트/다크 값 매핑 */
+:root, [data-baseweb="baseweb"] {
+  --background-color: transparent;
+  --secondary-background-color: rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root, [data-baseweb="baseweb"] {
+    --background-color: transparent;
+    --secondary-background-color: rgba(255,255,255,.12);
+  }
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -165,13 +186,15 @@ mask = pd.Series([True]*len(df))
 if selected:
     mask &= df["CATEGORY"].isin(selected)
 if query:
-    mask &= (df["QUESTION"].str.contains(query, case=False, na=False)
-             | df["ANSWER"].str.contains(query, case=False, na=False))
+    mask &= (
+        df["QUESTION"].str.contains(query, case=False, na=False) |
+        df["ANSWER"].str.contains(query, case=False, na=False)
+    )
+
 results = df[mask].reset_index(drop=True)
 
 st.markdown(f"**총 {len(results)}건** 표시 중")
 st.markdown("<hr class='hr-soft'/>", unsafe_allow_html=True)
-
 
 for _, row in results.iterrows():
     q = str(row.get("QUESTION", "")).strip()
