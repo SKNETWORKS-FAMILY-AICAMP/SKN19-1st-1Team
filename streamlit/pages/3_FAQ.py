@@ -56,7 +56,7 @@ def load_env_config():
             "DB 접속 정보가 부족합니다. 누락 필드: "
             + ", ".join(missing)
             + "\n\n`streamlit/.env` 에 아래 형식으로 작성해 주세요:\n"
-            "DB_HOST=127.0.0.1\nDB_PORT=3306\nDB_USER=root\nDB_PASSWORD=zzzz\nDB_NAME=carmesamadb"
+            "DB_HOST=127.0.0.1\nDB_PORT=3306\nDB_USER=root\nDB_PASSWORD=0000\nDB_NAME=carmesamadb"
         )
         st.stop()
 
