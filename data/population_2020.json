@@ -1,0 +1,1392 @@
+[
+  {
+    "REG_ID": 1,
+    "YEAR": 2020,
+    "POPULATION": 149384
+  },
+  {
+    "REG_ID": 2,
+    "YEAR": 2020,
+    "POPULATION": 125240
+  },
+  {
+    "REG_ID": 3,
+    "YEAR": 2020,
+    "POPULATION": 230040
+  },
+  {
+    "REG_ID": 4,
+    "YEAR": 2020,
+    "POPULATION": 293556
+  },
+  {
+    "REG_ID": 5,
+    "YEAR": 2020,
+    "POPULATION": 346682
+  },
+  {
+    "REG_ID": 6,
+    "YEAR": 2020,
+    "POPULATION": 342837
+  },
+  {
+    "REG_ID": 7,
+    "YEAR": 2020,
+    "POPULATION": 394702
+  },
+  {
+    "REG_ID": 8,
+    "YEAR": 2020,
+    "POPULATION": 437153
+  },
+  {
+    "REG_ID": 9,
+    "YEAR": 2020,
+    "POPULATION": 308055
+  },
+  {
+    "REG_ID": 10,
+    "YEAR": 2020,
+    "POPULATION": 325257
+  },
+  {
+    "REG_ID": 11,
+    "YEAR": 2020,
+    "POPULATION": 523037
+  },
+  {
+    "REG_ID": 12,
+    "YEAR": 2020,
+    "POPULATION": 479835
+  },
+  {
+    "REG_ID": 13,
+    "YEAR": 2020,
+    "POPULATION": 312173
+  },
+  {
+    "REG_ID": 14,
+    "YEAR": 2020,
+    "POPULATION": 371890
+  },
+  {
+    "REG_ID": 15,
+    "YEAR": 2020,
+    "POPULATION": 454251
+  },
+  {
+    "REG_ID": 16,
+    "YEAR": 2020,
+    "POPULATION": 580185
+  },
+  {
+    "REG_ID": 17,
+    "YEAR": 2020,
+    "POPULATION": 404408
+  },
+  {
+    "REG_ID": 18,
+    "YEAR": 2020,
+    "POPULATION": 231733
+  },
+  {
+    "REG_ID": 19,
+    "YEAR": 2020,
+    "POPULATION": 379480
+  },
+  {
+    "REG_ID": 20,
+    "YEAR": 2020,
+    "POPULATION": 391220
+  },
+  {
+    "REG_ID": 21,
+    "YEAR": 2020,
+    "POPULATION": 495060
+  },
+  {
+    "REG_ID": 22,
+    "YEAR": 2020,
+    "POPULATION": 425126
+  },
+  {
+    "REG_ID": 23,
+    "YEAR": 2020,
+    "POPULATION": 539231
+  },
+  {
+    "REG_ID": 24,
+    "YEAR": 2020,
+    "POPULATION": 667960
+  },
+  {
+    "REG_ID": 25,
+    "YEAR": 2020,
+    "POPULATION": 459970
+  },
+  {
+    "REG_ID": 26,
+    "YEAR": 2020,
+    "POPULATION": 41523
+  },
+  {
+    "REG_ID": 27,
+    "YEAR": 2020,
+    "POPULATION": 108135
+  },
+  {
+    "REG_ID": 28,
+    "YEAR": 2020,
+    "POPULATION": 88901
+  },
+  {
+    "REG_ID": 29,
+    "YEAR": 2020,
+    "POPULATION": 113342
+  },
+  {
+    "REG_ID": 30,
+    "YEAR": 2020,
+    "POPULATION": 359886
+  },
+  {
+    "REG_ID": 31,
+    "YEAR": 2020,
+    "POPULATION": 270745
+  },
+  {
+    "REG_ID": 32,
+    "YEAR": 2020,
+    "POPULATION": 267731
+  },
+  {
+    "REG_ID": 33,
+    "YEAR": 2020,
+    "POPULATION": 283952
+  },
+  {
+    "REG_ID": 34,
+    "YEAR": 2020,
+    "POPULATION": 402169
+  },
+  {
+    "REG_ID": 35,
+    "YEAR": 2020,
+    "POPULATION": 311757
+  },
+  {
+    "REG_ID": 36,
+    "YEAR": 2020,
+    "POPULATION": 232666
+  },
+  {
+    "REG_ID": 37,
+    "YEAR": 2020,
+    "POPULATION": 137957
+  },
+  {
+    "REG_ID": 38,
+    "YEAR": 2020,
+    "POPULATION": 209157
+  },
+  {
+    "REG_ID": 39,
+    "YEAR": 2020,
+    "POPULATION": 176894
+  },
+  {
+    "REG_ID": 40,
+    "YEAR": 2020,
+    "POPULATION": 212586
+  },
+  {
+    "REG_ID": 41,
+    "YEAR": 2020,
+    "POPULATION": 174545
+  },
+  {
+    "REG_ID": 42,
+    "YEAR": 2020,
+    "POPULATION": 76547
+  },
+  {
+    "REG_ID": 43,
+    "YEAR": 2020,
+    "POPULATION": 341920
+  },
+  {
+    "REG_ID": 44,
+    "YEAR": 2020,
+    "POPULATION": 170700
+  },
+  {
+    "REG_ID": 45,
+    "YEAR": 2020,
+    "POPULATION": 146632
+  },
+  {
+    "REG_ID": 46,
+    "YEAR": 2020,
+    "POPULATION": 440263
+  },
+  {
+    "REG_ID": 47,
+    "YEAR": 2020,
+    "POPULATION": 424314
+  },
+  {
+    "REG_ID": 48,
+    "YEAR": 2020,
+    "POPULATION": 558631
+  },
+  {
+    "REG_ID": 49,
+    "YEAR": 2020,
+    "POPULATION": 259339
+  },
+  {
+    "REG_ID": 50,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 51,
+    "YEAR": 2020,
+    "POPULATION": 139729
+  },
+  {
+    "REG_ID": 52,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 53,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 54,
+    "YEAR": 2020,
+    "POPULATION": 62542
+  },
+  {
+    "REG_ID": 55,
+    "YEAR": 2020,
+    "POPULATION": 404343
+  },
+  {
+    "REG_ID": 56,
+    "YEAR": 2020,
+    "POPULATION": 387450
+  },
+  {
+    "REG_ID": 57,
+    "YEAR": 2020,
+    "POPULATION": 525354
+  },
+  {
+    "REG_ID": 58,
+    "YEAR": 2020,
+    "POPULATION": 494962
+  },
+  {
+    "REG_ID": 59,
+    "YEAR": 2020,
+    "POPULATION": 296750
+  },
+  {
+    "REG_ID": 60,
+    "YEAR": 2020,
+    "POPULATION": 542040
+  },
+  {
+    "REG_ID": 61,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 62,
+    "YEAR": 2020,
+    "POPULATION": 69203
+  },
+  {
+    "REG_ID": 63,
+    "YEAR": 2020,
+    "POPULATION": 20455
+  },
+  {
+    "REG_ID": 64,
+    "YEAR": 2020,
+    "POPULATION": 102897
+  },
+  {
+    "REG_ID": 65,
+    "YEAR": 2020,
+    "POPULATION": 296576
+  },
+  {
+    "REG_ID": 66,
+    "YEAR": 2020,
+    "POPULATION": 214579
+  },
+  {
+    "REG_ID": 67,
+    "YEAR": 2020,
+    "POPULATION": 430431
+  },
+  {
+    "REG_ID": 68,
+    "YEAR": 2020,
+    "POPULATION": 405579
+  },
+  {
+    "REG_ID": 69,
+    "YEAR": 2020,
+    "POPULATION": 223021
+  },
+  {
+    "REG_ID": 70,
+    "YEAR": 2020,
+    "POPULATION": 235550
+  },
+  {
+    "REG_ID": 71,
+    "YEAR": 2020,
+    "POPULATION": 477880
+  },
+  {
+    "REG_ID": 72,
+    "YEAR": 2020,
+    "POPULATION": 351047
+  },
+  {
+    "REG_ID": 73,
+    "YEAR": 2020,
+    "POPULATION": 176384
+  },
+  {
+    "REG_ID": 74,
+    "YEAR": 2020,
+    "POPULATION": 217595
+  },
+  {
+    "REG_ID": 75,
+    "YEAR": 2020,
+    "POPULATION": 320064
+  },
+  {
+    "REG_ID": 76,
+    "YEAR": 2020,
+    "POPULATION": 156806
+  },
+  {
+    "REG_ID": 77,
+    "YEAR": 2020,
+    "POPULATION": 219014
+  },
+  {
+    "REG_ID": 78,
+    "YEAR": 2020,
+    "POPULATION": 222538
+  },
+  {
+    "REG_ID": 79,
+    "YEAR": 2020,
+    "POPULATION": 355831
+  },
+  {
+    "REG_ID": 80,
+    "YEAR": 2020,
+    "POPULATION": 1186078
+  },
+  {
+    "REG_ID": 81,
+    "YEAR": 2020,
+    "POPULATION": 273661
+  },
+  {
+    "REG_ID": 82,
+    "YEAR": 2020,
+    "POPULATION": 368645
+  },
+  {
+    "REG_ID": 83,
+    "YEAR": 2020,
+    "POPULATION": 174930
+  },
+  {
+    "REG_ID": 84,
+    "YEAR": 2020,
+    "POPULATION": 368842
+  },
+  {
+    "REG_ID": 85,
+    "YEAR": 2020,
+    "POPULATION": 940064
+  },
+  {
+    "REG_ID": 86,
+    "YEAR": 2020,
+    "POPULATION": 241701
+  },
+  {
+    "REG_ID": 87,
+    "YEAR": 2020,
+    "POPULATION": 216131
+  },
+  {
+    "REG_ID": 88,
+    "YEAR": 2020,
+    "POPULATION": 482232
+  },
+  {
+    "REG_ID": 89,
+    "YEAR": 2020,
+    "POPULATION": 461710
+  },
+  {
+    "REG_ID": 90,
+    "YEAR": 2020,
+    "POPULATION": 550027
+  },
+  {
+    "REG_ID": 91,
+    "YEAR": 2020,
+    "POPULATION": 239413
+  },
+  {
+    "REG_ID": 92,
+    "YEAR": 2020,
+    "POPULATION": 310614
+  },
+  {
+    "REG_ID": 93,
+    "YEAR": 2020,
+    "POPULATION": 818383
+  },
+  {
+    "REG_ID": 94,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 95,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 96,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 97,
+    "YEAR": 2020,
+    "POPULATION": 298599
+  },
+  {
+    "REG_ID": 98,
+    "YEAR": 2020,
+    "POPULATION": 537307
+  },
+  {
+    "REG_ID": 99,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 100,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 101,
+    "YEAR": 2020,
+    "POPULATION": 94353
+  },
+  {
+    "REG_ID": 102,
+    "YEAR": 2020,
+    "POPULATION": 654915
+  },
+  {
+    "REG_ID": 103,
+    "YEAR": 2020,
+    "POPULATION": 351888
+  },
+  {
+    "REG_ID": 104,
+    "YEAR": 2020,
+    "POPULATION": 303027
+  },
+  {
+    "REG_ID": 105,
+    "YEAR": 2020,
+    "POPULATION": 1079216
+  },
+  {
+    "REG_ID": 106,
+    "YEAR": 2020,
+    "POPULATION": 476962
+  },
+  {
+    "REG_ID": 107,
+    "YEAR": 2020,
+    "POPULATION": 299716
+  },
+  {
+    "REG_ID": 108,
+    "YEAR": 2020,
+    "POPULATION": 302538
+  },
+  {
+    "REG_ID": 109,
+    "YEAR": 2020,
+    "POPULATION": 63231
+  },
+  {
+    "REG_ID": 110,
+    "YEAR": 2020,
+    "POPULATION": 197454
+  },
+  {
+    "REG_ID": 111,
+    "YEAR": 2020,
+    "POPULATION": 713321
+  },
+  {
+    "REG_ID": 112,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 113,
+    "YEAR": 2020,
+    "POPULATION": 229725
+  },
+  {
+    "REG_ID": 114,
+    "YEAR": 2020,
+    "POPULATION": 500895
+  },
+  {
+    "REG_ID": 115,
+    "YEAR": 2020,
+    "POPULATION": 273791
+  },
+  {
+    "REG_ID": 116,
+    "YEAR": 2020,
+    "POPULATION": 163795
+  },
+  {
+    "REG_ID": 117,
+    "YEAR": 2020,
+    "POPULATION": 293452
+  },
+  {
+    "REG_ID": 118,
+    "YEAR": 2020,
+    "POPULATION": 1074176
+  },
+  {
+    "REG_ID": 119,
+    "YEAR": 2020,
+    "POPULATION": 257498
+  },
+  {
+    "REG_ID": 120,
+    "YEAR": 2020,
+    "POPULATION": 440835
+  },
+  {
+    "REG_ID": 121,
+    "YEAR": 2020,
+    "POPULATION": 375843
+  },
+  {
+    "REG_ID": 122,
+    "YEAR": 2020,
+    "POPULATION": 465617
+  },
+  {
+    "REG_ID": 123,
+    "YEAR": 2020,
+    "POPULATION": 218388
+  },
+  {
+    "REG_ID": 124,
+    "YEAR": 2020,
+    "POPULATION": 187012
+  },
+  {
+    "REG_ID": 125,
+    "YEAR": 2020,
+    "POPULATION": 473970
+  },
+  {
+    "REG_ID": 126,
+    "YEAR": 2020,
+    "POPULATION": 855248
+  },
+  {
+    "REG_ID": 127,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 128,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 129,
+    "YEAR": 2020,
+    "POPULATION": 382054
+  },
+  {
+    "REG_ID": 130,
+    "YEAR": 2020,
+    "POPULATION": 230359
+  },
+  {
+    "REG_ID": 131,
+    "YEAR": 2020,
+    "POPULATION": 147274
+  },
+  {
+    "REG_ID": 132,
+    "YEAR": 2020,
+    "POPULATION": 111897
+  },
+  {
+    "REG_ID": 133,
+    "YEAR": 2020,
+    "POPULATION": 43516
+  },
+  {
+    "REG_ID": 134,
+    "YEAR": 2020,
+    "POPULATION": 62377
+  },
+  {
+    "REG_ID": 135,
+    "YEAR": 2020,
+    "POPULATION": 118810
+  },
+  {
+    "REG_ID": 136,
+    "YEAR": 2020,
+    "POPULATION": 282765
+  },
+  {
+    "REG_ID": 137,
+    "YEAR": 2020,
+    "POPULATION": 354376
+  },
+  {
+    "REG_ID": 138,
+    "YEAR": 2020,
+    "POPULATION": 213321
+  },
+  {
+    "REG_ID": 139,
+    "YEAR": 2020,
+    "POPULATION": 90593
+  },
+  {
+    "REG_ID": 140,
+    "YEAR": 2020,
+    "POPULATION": 42719
+  },
+  {
+    "REG_ID": 141,
+    "YEAR": 2020,
+    "POPULATION": 82665
+  },
+  {
+    "REG_ID": 142,
+    "YEAR": 2020,
+    "POPULATION": 65243
+  },
+  {
+    "REG_ID": 143,
+    "YEAR": 2020,
+    "POPULATION": 69242
+  },
+  {
+    "REG_ID": 144,
+    "YEAR": 2020,
+    "POPULATION": 46472
+  },
+  {
+    "REG_ID": 145,
+    "YEAR": 2020,
+    "POPULATION": 38662
+  },
+  {
+    "REG_ID": 146,
+    "YEAR": 2020,
+    "POPULATION": 41681
+  },
+  {
+    "REG_ID": 147,
+    "YEAR": 2020,
+    "POPULATION": 36870
+  },
+  {
+    "REG_ID": 148,
+    "YEAR": 2020,
+    "POPULATION": 44699
+  },
+  {
+    "REG_ID": 149,
+    "YEAR": 2020,
+    "POPULATION": 24857
+  },
+  {
+    "REG_ID": 150,
+    "YEAR": 2020,
+    "POPULATION": 22278
+  },
+  {
+    "REG_ID": 151,
+    "YEAR": 2020,
+    "POPULATION": 31694
+  },
+  {
+    "REG_ID": 152,
+    "YEAR": 2020,
+    "POPULATION": 26757
+  },
+  {
+    "REG_ID": 153,
+    "YEAR": 2020,
+    "POPULATION": 27946
+  },
+  {
+    "REG_ID": 154,
+    "YEAR": 2020,
+    "POPULATION": 844993
+  },
+  {
+    "REG_ID": 155,
+    "YEAR": 2020,
+    "POPULATION": 190034
+  },
+  {
+    "REG_ID": 156,
+    "YEAR": 2020,
+    "POPULATION": 194720
+  },
+  {
+    "REG_ID": 157,
+    "YEAR": 2020,
+    "POPULATION": 265866
+  },
+  {
+    "REG_ID": 158,
+    "YEAR": 2020,
+    "POPULATION": 194373
+  },
+  {
+    "REG_ID": 159,
+    "YEAR": 2020,
+    "POPULATION": 210186
+  },
+  {
+    "REG_ID": 160,
+    "YEAR": 2020,
+    "POPULATION": 133018
+  },
+  {
+    "REG_ID": 161,
+    "YEAR": 2020,
+    "POPULATION": 32412
+  },
+  {
+    "REG_ID": 162,
+    "YEAR": 2020,
+    "POPULATION": 50527
+  },
+  {
+    "REG_ID": 163,
+    "YEAR": 2020,
+    "POPULATION": 47475
+  },
+  {
+    "REG_ID": 164,
+    "YEAR": 2020,
+    "POPULATION": 36807
+  },
+  {
+    "REG_ID": 165,
+    "YEAR": 2020,
+    "POPULATION": 83718
+  },
+  {
+    "REG_ID": 166,
+    "YEAR": 2020,
+    "POPULATION": 39393
+  },
+  {
+    "REG_ID": 167,
+    "YEAR": 2020,
+    "POPULATION": 93153
+  },
+  {
+    "REG_ID": 168,
+    "YEAR": 2020,
+    "POPULATION": 29155
+  },
+  {
+    "REG_ID": 169,
+    "YEAR": 2020,
+    "POPULATION": 658808
+  },
+  {
+    "REG_ID": 170,
+    "YEAR": 2020,
+    "POPULATION": 258009
+  },
+  {
+    "REG_ID": 171,
+    "YEAR": 2020,
+    "POPULATION": 400799
+  },
+  {
+    "REG_ID": 172,
+    "YEAR": 2020,
+    "POPULATION": 104545
+  },
+  {
+    "REG_ID": 173,
+    "YEAR": 2020,
+    "POPULATION": 100229
+  },
+  {
+    "REG_ID": 174,
+    "YEAR": 2020,
+    "POPULATION": 316129
+  },
+  {
+    "REG_ID": 175,
+    "YEAR": 2020,
+    "POPULATION": 175591
+  },
+  {
+    "REG_ID": 176,
+    "YEAR": 2020,
+    "POPULATION": 116675
+  },
+  {
+    "REG_ID": 177,
+    "YEAR": 2020,
+    "POPULATION": 42822
+  },
+  {
+    "REG_ID": 178,
+    "YEAR": 2020,
+    "POPULATION": 166249
+  },
+  {
+    "REG_ID": 179,
+    "YEAR": 2020,
+    "POPULATION": 51413
+  },
+  {
+    "REG_ID": 180,
+    "YEAR": 2020,
+    "POPULATION": 65354
+  },
+  {
+    "REG_ID": 181,
+    "YEAR": 2020,
+    "POPULATION": 51866
+  },
+  {
+    "REG_ID": 182,
+    "YEAR": 2020,
+    "POPULATION": 30948
+  },
+  {
+    "REG_ID": 183,
+    "YEAR": 2020,
+    "POPULATION": 100102
+  },
+  {
+    "REG_ID": 184,
+    "YEAR": 2020,
+    "POPULATION": 78084
+  },
+  {
+    "REG_ID": 185,
+    "YEAR": 2020,
+    "POPULATION": 62214
+  },
+  {
+    "REG_ID": 186,
+    "YEAR": 2020,
+    "POPULATION": 657432
+  },
+  {
+    "REG_ID": 187,
+    "YEAR": 2020,
+    "POPULATION": 339718
+  },
+  {
+    "REG_ID": 188,
+    "YEAR": 2020,
+    "POPULATION": 317714
+  },
+  {
+    "REG_ID": 189,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 190,
+    "YEAR": 2020,
+    "POPULATION": 267859
+  },
+  {
+    "REG_ID": 191,
+    "YEAR": 2020,
+    "POPULATION": 282276
+  },
+  {
+    "REG_ID": 192,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 193,
+    "YEAR": 2020,
+    "POPULATION": 108508
+  },
+  {
+    "REG_ID": 194,
+    "YEAR": 2020,
+    "POPULATION": 80662
+  },
+  {
+    "REG_ID": 195,
+    "YEAR": 2020,
+    "POPULATION": 82450
+  },
+  {
+    "REG_ID": 196,
+    "YEAR": 2020,
+    "POPULATION": 91609
+  },
+  {
+    "REG_ID": 197,
+    "YEAR": 2020,
+    "POPULATION": 25394
+  },
+  {
+    "REG_ID": 198,
+    "YEAR": 2020,
+    "POPULATION": 24036
+  },
+  {
+    "REG_ID": 199,
+    "YEAR": 2020,
+    "POPULATION": 22085
+  },
+  {
+    "REG_ID": 200,
+    "YEAR": 2020,
+    "POPULATION": 27314
+  },
+  {
+    "REG_ID": 201,
+    "YEAR": 2020,
+    "POPULATION": 27810
+  },
+  {
+    "REG_ID": 202,
+    "YEAR": 2020,
+    "POPULATION": 54529
+  },
+  {
+    "REG_ID": 203,
+    "YEAR": 2020,
+    "POPULATION": 52140
+  },
+  {
+    "REG_ID": 204,
+    "YEAR": 2020,
+    "POPULATION": 224044
+  },
+  {
+    "REG_ID": 205,
+    "YEAR": 2020,
+    "POPULATION": 280242
+  },
+  {
+    "REG_ID": 206,
+    "YEAR": 2020,
+    "POPULATION": 282189
+  },
+  {
+    "REG_ID": 207,
+    "YEAR": 2020,
+    "POPULATION": 115613
+  },
+  {
+    "REG_ID": 208,
+    "YEAR": 2020,
+    "POPULATION": 151769
+  },
+  {
+    "REG_ID": 209,
+    "YEAR": 2020,
+    "POPULATION": 46280
+  },
+  {
+    "REG_ID": 210,
+    "YEAR": 2020,
+    "POPULATION": 28039
+  },
+  {
+    "REG_ID": 211,
+    "YEAR": 2020,
+    "POPULATION": 25719
+  },
+  {
+    "REG_ID": 212,
+    "YEAR": 2020,
+    "POPULATION": 63922
+  },
+  {
+    "REG_ID": 213,
+    "YEAR": 2020,
+    "POPULATION": 40482
+  },
+  {
+    "REG_ID": 214,
+    "YEAR": 2020,
+    "POPULATION": 62522
+  },
+  {
+    "REG_ID": 215,
+    "YEAR": 2020,
+    "POPULATION": 37800
+  },
+  {
+    "REG_ID": 216,
+    "YEAR": 2020,
+    "POPULATION": 34597
+  },
+  {
+    "REG_ID": 217,
+    "YEAR": 2020,
+    "POPULATION": 68806
+  },
+  {
+    "REG_ID": 218,
+    "YEAR": 2020,
+    "POPULATION": 53699
+  },
+  {
+    "REG_ID": 219,
+    "YEAR": 2020,
+    "POPULATION": 86132
+  },
+  {
+    "REG_ID": 220,
+    "YEAR": 2020,
+    "POPULATION": 32050
+  },
+  {
+    "REG_ID": 221,
+    "YEAR": 2020,
+    "POPULATION": 53099
+  },
+  {
+    "REG_ID": 222,
+    "YEAR": 2020,
+    "POPULATION": 44464
+  },
+  {
+    "REG_ID": 223,
+    "YEAR": 2020,
+    "POPULATION": 49916
+  },
+  {
+    "REG_ID": 224,
+    "YEAR": 2020,
+    "POPULATION": 31227
+  },
+  {
+    "REG_ID": 225,
+    "YEAR": 2020,
+    "POPULATION": 38938
+  },
+  {
+    "REG_ID": 226,
+    "YEAR": 2020,
+    "POPULATION": 502916
+  },
+  {
+    "REG_ID": 227,
+    "YEAR": 2020,
+    "POPULATION": 230422
+  },
+  {
+    "REG_ID": 228,
+    "YEAR": 2020,
+    "POPULATION": 272494
+  },
+  {
+    "REG_ID": 229,
+    "YEAR": 2020,
+    "POPULATION": 253502
+  },
+  {
+    "REG_ID": 230,
+    "YEAR": 2020,
+    "POPULATION": 140548
+  },
+  {
+    "REG_ID": 231,
+    "YEAR": 2020,
+    "POPULATION": 158907
+  },
+  {
+    "REG_ID": 232,
+    "YEAR": 2020,
+    "POPULATION": 416328
+  },
+  {
+    "REG_ID": 233,
+    "YEAR": 2020,
+    "POPULATION": 103119
+  },
+  {
+    "REG_ID": 234,
+    "YEAR": 2020,
+    "POPULATION": 102015
+  },
+  {
+    "REG_ID": 235,
+    "YEAR": 2020,
+    "POPULATION": 97228
+  },
+  {
+    "REG_ID": 236,
+    "YEAR": 2020,
+    "POPULATION": 71406
+  },
+  {
+    "REG_ID": 237,
+    "YEAR": 2020,
+    "POPULATION": 263728
+  },
+  {
+    "REG_ID": 238,
+    "YEAR": 2020,
+    "POPULATION": 23256
+  },
+  {
+    "REG_ID": 239,
+    "YEAR": 2020,
+    "POPULATION": 51724
+  },
+  {
+    "REG_ID": 240,
+    "YEAR": 2020,
+    "POPULATION": 25044
+  },
+  {
+    "REG_ID": 241,
+    "YEAR": 2020,
+    "POPULATION": 16692
+  },
+  {
+    "REG_ID": 242,
+    "YEAR": 2020,
+    "POPULATION": 36313
+  },
+  {
+    "REG_ID": 243,
+    "YEAR": 2020,
+    "POPULATION": 42263
+  },
+  {
+    "REG_ID": 244,
+    "YEAR": 2020,
+    "POPULATION": 31361
+  },
+  {
+    "REG_ID": 245,
+    "YEAR": 2020,
+    "POPULATION": 43414
+  },
+  {
+    "REG_ID": 246,
+    "YEAR": 2020,
+    "POPULATION": 114758
+  },
+  {
+    "REG_ID": 247,
+    "YEAR": 2020,
+    "POPULATION": 55613
+  },
+  {
+    "REG_ID": 248,
+    "YEAR": 2020,
+    "POPULATION": 31494
+  },
+  {
+    "REG_ID": 249,
+    "YEAR": 2020,
+    "POPULATION": 48716
+  },
+  {
+    "REG_ID": 250,
+    "YEAR": 2020,
+    "POPULATION": 9077
+  },
+  {
+    "REG_ID": 251,
+    "YEAR": 2020,
+    "POPULATION": 1036738
+  },
+  {
+    "REG_ID": 252,
+    "YEAR": 2020,
+    "POPULATION": 262408
+  },
+  {
+    "REG_ID": 253,
+    "YEAR": 2020,
+    "POPULATION": 214570
+  },
+  {
+    "REG_ID": 254,
+    "YEAR": 2020,
+    "POPULATION": 175716
+  },
+  {
+    "REG_ID": 255,
+    "YEAR": 2020,
+    "POPULATION": 191289
+  },
+  {
+    "REG_ID": 256,
+    "YEAR": 2020,
+    "POPULATION": 192755
+  },
+  {
+    "REG_ID": 257,
+    "YEAR": 2020,
+    "POPULATION": 348096
+  },
+  {
+    "REG_ID": 258,
+    "YEAR": 2020,
+    "POPULATION": 128293
+  },
+  {
+    "REG_ID": 259,
+    "YEAR": 2020,
+    "POPULATION": 111105
+  },
+  {
+    "REG_ID": 260,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 261,
+    "YEAR": 2020,
+    "POPULATION": 542338
+  },
+  {
+    "REG_ID": 262,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 263,
+    "YEAR": 2020,
+    "POPULATION": 104831
+  },
+  {
+    "REG_ID": 264,
+    "YEAR": 2020,
+    "POPULATION": 245754
+  },
+  {
+    "REG_ID": 265,
+    "YEAR": 2020,
+    "POPULATION": 352229
+  },
+  {
+    "REG_ID": 266,
+    "YEAR": 2020,
+    "POPULATION": 0
+  },
+  {
+    "REG_ID": 267,
+    "YEAR": 2020,
+    "POPULATION": 26800
+  },
+  {
+    "REG_ID": 268,
+    "YEAR": 2020,
+    "POPULATION": 64182
+  },
+  {
+    "REG_ID": 269,
+    "YEAR": 2020,
+    "POPULATION": 61301
+  },
+  {
+    "REG_ID": 270,
+    "YEAR": 2020,
+    "POPULATION": 51361
+  },
+  {
+    "REG_ID": 271,
+    "YEAR": 2020,
+    "POPULATION": 42958
+  },
+  {
+    "REG_ID": 272,
+    "YEAR": 2020,
+    "POPULATION": 44785
+  },
+  {
+    "REG_ID": 273,
+    "YEAR": 2020,
+    "POPULATION": 34857
+  },
+  {
+    "REG_ID": 274,
+    "YEAR": 2020,
+    "POPULATION": 39080
+  },
+  {
+    "REG_ID": 275,
+    "YEAR": 2020,
+    "POPULATION": 61502
+  },
+  {
+    "REG_ID": 276,
+    "YEAR": 2020,
+    "POPULATION": 44006
+  },
+  {
+    "REG_ID": 277,
+    "YEAR": 2020,
+    "POPULATION": 492466
+  },
+  {
+    "REG_ID": 278,
+    "YEAR": 2020,
+    "POPULATION": 182169
+  }
+]
