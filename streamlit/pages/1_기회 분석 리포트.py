@@ -14,7 +14,7 @@ load_dotenv()
 # 페이지 초기화
 # ------------------------------------------------------------
 
-st.set_page_config(page_title="기회 분석 리포트", page_icon="🛞", layout="wide")
+st.set_page_config(page_title="기회 분석 리포트", page_icon="🛞")
 
 # ------------------------------------------------------------
 # DB 연결
@@ -22,10 +22,10 @@ st.set_page_config(page_title="기회 분석 리포트", page_icon="🛞", layou
 
 # 커넥션 정보
 connect_info = {
-        "host": os.getenv("CONNECTION_HOST"),           # 연결주소
-        "user": os.getenv("CONNECTION_USER"),           # userid
-        "password": os.getenv("CONNECTION_PASSWORD"),   # 패스워드
-        "database": os.getenv("CONNECTION_DB")          # default 스키마
+        "host": os.getenv("DB_HOST"),           # 연결주소
+        "user": os.getenv("DB_USER"),           # userid
+        "password": os.getenv("DB_PASSWORD"),   # 패스워드
+        "database": os.getenv("DB_NAME")          # default 스키마
     }
 
 
@@ -44,7 +44,8 @@ def get_infos(reg_id):
     SUM(CASE WHEN YEAR=2023 THEN 1 ELSE 0 END) AS `SUP_2023`,
     SUM(CASE WHEN YEAR=2024 THEN 1 ELSE 0 END) AS `SUP_2024`
     FROM tbl_supplier s
-    WHERE %s IS NULL OR REG_ID = %s;
+    WHERE (%s IS NULL OR REG_ID = %s)
+    AND REG_ID NOT IN (SELECT DISTINCT REG_ID FROM tbl_population WHERE POPULATION = 0);
     """
 
     cursor.execute(sql1, (reg_id, reg_id))
@@ -59,7 +60,8 @@ def get_infos(reg_id):
     SUM(CASE WHEN YEAR=2023 THEN POPULATION ELSE 0 END) AS `POP_2023`,
     SUM(CASE WHEN YEAR=2024 THEN POPULATION ELSE 0 END) AS `POP_2024`
     FROM tbl_population c
-    WHERE %s IS NULL OR REG_ID = %s;
+    WHERE (%s IS NULL OR REG_ID = %s)
+    AND REG_ID NOT IN (SELECT DISTINCT REG_ID FROM tbl_population WHERE POPULATION = 0);
     """
 
     cursor.execute(sql2, (reg_id, reg_id))
@@ -75,7 +77,8 @@ def get_infos(reg_id):
     SUM(CASE WHEN YEAR=2023 THEN CAR ELSE 0 END) AS `CAR_2023`,
     SUM(CASE WHEN YEAR=2024 THEN CAR ELSE 0 END) AS `CAR_2024`
     FROM tbl_car c
-    WHERE %s IS NULL OR REG_ID = %s;
+    WHERE (%s IS NULL OR REG_ID = %s)
+    AND REG_ID NOT IN (SELECT DISTINCT REG_ID FROM tbl_population WHERE POPULATION = 0);
     """
 
     cursor.execute(sql3, (reg_id, reg_id))
@@ -176,7 +179,13 @@ def make_chart(years:list, suppliers:list, populations:list, cars:list):
 connection = mysql.connector.connect(**connect_info)
 cursor = connection.cursor(dictionary=True)
 
-sql_region = "SELECT DISTINCT REGION,SUBREGION, REG_ID FROM TBL_REGION;"
+sql_region = """SELECT DISTINCT REGION,SUBREGION, REG_ID FROM TBL_REGION R WHERE
+REG_ID IN (SELECT DISTINCT REG_ID FROM tbl_population)
+AND REG_ID IN (SELECT DISTINCT REG_ID FROM TBL_CAR)
+AND REG_ID IN (SELECT DISTINCT REG_ID FROM TBL_SUPPLIER)
+AND REG_ID NOT IN (SELECT DISTINCT REG_ID FROM tbl_population WHERE POPULATION = 0)
+AND REG_ID NOT IN (SELECT DISTINCT REG_ID FROM TBL_CAR WHERE CAR = 0);
+"""
 
 cursor.execute(sql_region)
 region_raw = cursor.fetchall()
