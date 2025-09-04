@@ -56,14 +56,10 @@
 | 카테고리               | 기술 스택                                                      |
 | ---------------------- | ------------------------------------------------------------- |
 | **WEB**                | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="Streamlit" width="20"/> Streamlit  |
-| **라이브러리**         | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" width="20"/> Pandas |
+| **라이브러리**         | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" width="20"/> Pandas, <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" /> matplotlib |
 | **데이터베이스**       | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="20"/> MySQL  |
 | **개발 환경 및 협업 도구** | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="20"/> Git, <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode" width="20"/> VSCode, <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" alt="Notion" width="20"/> Notion |
 
-
-
-## 📋WBS
-<img alt='wbs' src='image/wbs.png' />
 
 
 ## 📋요구 사항 명세서
@@ -112,7 +108,7 @@
 ## 📋한줄 회고 
 - **김범섭**
 
-API데이터 크롤링 후 리포트에 필요한 정보를 만드는데 주력했다. 데이터를 모으는 시간보다 데이터를 의미있는 정보로 바꾸는데 많은 시간이 투자 되며 데이터 자체에 대한 중요성을 느꼈다. 팀원들과 각자 작업을 하던 소스를 합쳐 모은뒤 많은 에러가 발생했는데 이것 때문에 개발 환경설정에 대한 세밀한 약속을 하는 것이 중요하다는 것을 다시금 느꼈다. 
+    API데이터 크롤링 후 리포트에 필요한 정보를 만드는데 주력했다. 데이터를 모으는 시간보다 데이터를 의미있는 정보로 바꾸는데 많은 시간이 투자되며 데이터 자체에 대한 중요성을 느꼈다. 팀원들과 각자 작업을 하던 소스를 합쳐 모은 뒤 많은 에러가 발생했는데 이것 때문에 개발 환경설정에 대한 세밀한 약속을 하는 것이 중요하다는 것을 다시금 느꼈다.
   
 - **김성욱**
 
