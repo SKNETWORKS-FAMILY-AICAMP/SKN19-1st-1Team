@@ -28,6 +28,8 @@ connect_info = {
         "database": os.getenv("CONNECTION_DB")          # default 스키마
     }
 
+print(connect_info)
+
 
 def get_infos(reg_id):
 
