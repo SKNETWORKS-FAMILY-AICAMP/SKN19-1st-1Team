@@ -89,7 +89,6 @@
 
     https://www.data.go.kr/data/3082188/fileData.do#tab-layer-openapi
 
-
 - **올타 faq, 전국 매장 현황**
 
     http://alltire.koweb.co.kr/program.html?program_id=koweb_faq
@@ -120,3 +119,5 @@
 
 
 - **안수이**
+
+   ERD 작성이나 DB 설계를 구현하면서 MYSQL 사용이 익숙해졌고 쿼리 작성과 파이썬으로 MYSQL에 연결하는 코드를 복습할 수 있었다. 데이터를 수집한 후 DB에 넣고 정제하는 과정을 통해  MYSQL에 대한 이해가 깊어졌다. 또한 프로젝트에서 데이터 확보가 얼마나 중요한지를 배웠고 이번 프로젝트를 통해 다음 팀 프로젝트에서는 어떻게 진행해야 할 지 개선점을 찾아낼 수 있었다. 다들 고생하셨습니다 !
