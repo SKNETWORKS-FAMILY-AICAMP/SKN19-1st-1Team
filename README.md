@@ -17,7 +17,7 @@
     <td align="center" style="padding: 20px;">
       <strong>박소희</strong><br/>
       <a href="https://github.com/souluk319">GitHub</a><br/>
-      @
+      @xxoysauce
     </td>
     <td align="center" style="padding: 20px;">
       <strong>안수이</strong><br/>
