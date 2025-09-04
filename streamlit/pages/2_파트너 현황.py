@@ -8,6 +8,7 @@ import mysql.connector
 # --- 1. 환경 변수 및 페이지 설정 ---
 load_dotenv()
 st.title("파트너 현황")
+st.set_page_config(page_title="파트너 현황", page_icon="🛞", layout="wide")
 
 # --- 2. DB 연결 및 데이터 로직 ---
 # mysql.connector는 커넥션 풀을 제공하지 않으므로, 연결/해제 로직을 직접 관리합니다.

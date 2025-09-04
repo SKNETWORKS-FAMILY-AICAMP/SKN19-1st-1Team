@@ -13,8 +13,8 @@ load_dotenv()
 # ------------------------------------------------------------
 # 페이지 초기화
 # ------------------------------------------------------------
-
-st.set_page_config(page_title="기회 분석 리포트", page_icon="🛞")
+st.title("기회 분석 리포트")
+st.set_page_config(page_title="기회 분석 리포트", page_icon="🛞", layout="centered")
 
 # ------------------------------------------------------------
 # DB 연결
@@ -28,7 +28,7 @@ connect_info = {
         "database": os.getenv("DB_NAME")          # default 스키마
     }
 
-print(connect_info)
+# print(connect_info)
 
 
 def get_infos(reg_id):
