@@ -4,22 +4,22 @@
 ### 하지만빨랐조
 <table align="center">
  <tr>
-    <td align="center" style="padding:11px;">
+    <td align="center" style="padding:20px;">
         <strong>김범섭</strong><br/>
         <a href="https://github.com/WhatSupYap">GitHub</a><br/>
          @WhatSupYap
    </td>
-    <td align="center" style="padding:10px;">
+    <td align="center" style="padding:20px;">
         <strong>김성욱</strong><br/>
         <a href="https://github.com/">GitHub</a><br/>
         @
     </td>
-    <td align="center" style="padding: 10px;">
+    <td align="center" style="padding: 20px;">
       <strong>박소희</strong><br/>
       <a href="https://github.com/souluk319">GitHub</a><br/>
       @souluk319
     </td>
-    <td align="center" style="padding: 10px;">
+    <td align="center" style="padding: 20px;">
       <strong>안수이</strong><br/>
       <a href="https://github.com/ahnsui">GitHub</a><br/>
       @ahnsui
@@ -27,10 +27,8 @@
   </tr>
 </table>
 
-## 프로젝트 명: CarInfo Hub for Business
-## 프로젝트 소개
+## 프로젝트 소개: 타이어 매장 예비 점주를 위한 정보 제공 플랫폼
 전국 자동차 등록 현황 및 기존 타이어 매장 현황 분석을 통한 타이어 매장 개점에 최적화된 입지 정보 제공
-
 
 
 ## 프로젝트 필요성
@@ -44,7 +42,7 @@
     
     기존 매장이 과밀한 지역에 신규 매장 개설 시, 경쟁 심화 → 수익성 저하
     
-    ⇒ 데이터 기반 입지 선정의 필요성
+    → 데이터 기반 입지 선정의 필요성
     
 3. **경험 부족 보완** 
     
