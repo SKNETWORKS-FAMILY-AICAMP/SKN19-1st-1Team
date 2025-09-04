@@ -7,6 +7,7 @@ import mysql.connector
 import os
 import platform
 
+# 환경설정 추가
 load_dotenv()
 
 # ------------------------------------------------------------
